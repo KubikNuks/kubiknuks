@@ -15,7 +15,14 @@ form {
   padding: 20px;
   border-radius: 10px;
 }
-
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
 /* Style the input fields and button */
 input[type="email"],
 input[type="text"],
@@ -92,7 +99,6 @@ a:hover {
 <!-- file download from github 'username'repoand path  -->
 <!-- download to what name its after downld-->
 <!--listener to send data analitycs when downloaded -->
-<button><a href="https://raw.githubusercontent.com/kubiknuks/kubiknuks/main/Group 46 (1).pdf" onclick="ga('send', 'event', 'File Downloads', 'Download', 'Filename.pdf');" download="custom-filename.pdf">CV</a></button>
-
+<a href="https://raw.githubusercontent.com/kubiknuks/kubiknuks/main/Group 46 (1).pdf" class="button" onclick="ga('send', 'event', 'File Downloads', 'Download', 'Filename.pdf');" download="custom-filename.pdf">CV</a>
 </body>
 </html>
