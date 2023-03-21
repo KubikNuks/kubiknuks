@@ -28,7 +28,7 @@ form {
   
   
   padding: 10px 20px;
-  background-color: #f44336;
+  background-color: #36f475;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -71,7 +71,28 @@ a {
 
 a:hover {
   text-decoration: underline;
+
 }
+
+img {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: rotateY(180deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotateY(360deg);
+    animation-timing-function: ease-in;
+  }
+}
+
 
     </style>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.forms.na1.netsrc.io https://formspree.io">
@@ -109,10 +130,20 @@ a:hover {
 -->
 <!-- file download from github 'username'repoand path  -->
 <!-- download to what name its after downld-->
-<!--listener to send data analitycs when downloaded --><div style="text-align: center;">
+<!--listener to send data analitycs when downloaded -->
+<div class="container">
+  <div class="left-column">
+<div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/KubikNuks/kubiknuks/10046b78f591e4a6870a680ca39e004b98230ce1/Focia%201.svg" >
-  <h1>Pobierz moje CV!</h1>
+  <h1>Pobierz staty</h1>
 <a href="https://raw.githubusercontent.com/kubiknuks/kubiknuks/main/Group 46 (1).pdf" class="button" onclick="ga('send', 'event', 'File Downloads', 'Download', 'Filename.pdf');" download="custom-filename.pdf">CV</a>
+</div>
+  </div>
+  <div class="right-column">
+    <div class="gallery-container">
+      <!-- Insert your slider gallery code here -->
+    </div>
+  </div>
 </div>
 </body>
 </html>
