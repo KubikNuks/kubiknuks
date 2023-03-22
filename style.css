@@ -48,13 +48,13 @@ background-color: #fff;
 }
 
 button[type="submit"] {
-background-color: #4CAF50;
+background-color: #714dac;
 color: #fff;
 cursor: pointer;
 }
 
 button[type="submit"]:hover {
-background-color: #3e8e41;
+background-color: #7a53a5;
 }
 
 /* Center the link */
