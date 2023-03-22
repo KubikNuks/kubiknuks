@@ -1,28 +1,30 @@
-const a = 'John';
-const b = 'John';
 
-if (a === b) {
-  const welcomeMsg = `Welcome, ${a}!`;
-  const h1Elem = document.createElement('h1');
-  h1Elem.textContent = welcomeMsg;
-  h1Elem.style.fontFamily = 'Arial';
-  document.body.appendChild(h1Elem);
-}
+  
 
 
 
+window.onload = function() {
+    var link = document.getElementsByTagName("a")[0];
+  
+    link.addEventListener('mouseover', function() {
+      if (this.classList.contains('button-hover')) {
+        this.classList.remove('button-hover');
+        this.classList.add('button');
+      } else {
+        this.classList.remove('button');
+        this.classList.add('button-hover');
+      }
+    });
+  };
+  
+      
+     //if (this.classList.contains('button-hover')) {
+        //this.classList.add('button');
+      //}
+  
+  
 
 
-const inputField = document.getElementById('username-input');
-const confirmBtn = document.getElementById('confirm-btn');
 
-// Add event listener for button click
-confirmBtn.addEventListener('click', () => {
-  const username = inputField.value;
-  if (username) {
-    alert(`Welcome, ${username}!`);
-  } else {
-    alert('Please enter your name');
-  }
-});
+
 

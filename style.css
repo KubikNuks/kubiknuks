@@ -1,12 +1,11 @@
 
 body {
+background-color: #51386b;
 display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh; /* sets the height of the page to be the viewport height */
 }
-
-/* Center the form */
 form {
 display: flex;
 flex-direction: column;
@@ -19,18 +18,25 @@ padding: 20px;
 border-radius: 10px;
 }
 .button {
-
 text-align: center;
-
-
-
 padding: 10px 20px;
-background-color: #855daa;
+background: linear-gradient(to left, #532a66, #c0a0cf);
 color: #fff;
 text-decoration: none;
 border-radius: 5px;
 }
-/* Style the input fields and button */
+
+
+
+.button-hover {
+  text-align: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #665b2a, #1cac70);
+  color: #fff;
+text-decoration: none;
+border-radius: 5px;
+}
+/* Style the input fields and button 
 input[type="email"],
 input[type="text"],
 button[type="submit"] {
@@ -48,13 +54,13 @@ background-color: #fff;
 }
 
 button[type="submit"] {
-background-color: #714dac;
+background-color: #471597;
 color: #fff;
 cursor: pointer;
 }
 
 button[type="submit"]:hover {
-background-color: #7a53a5;
+background-color: #c4a4e6;
 }
 
 /* Center the link */
@@ -63,13 +69,11 @@ display: block;
 margin-top: 20px;
 text-align: center;
 text-decoration: none;
-color: #725aca;
-}
-
-a:hover {
-text-decoration: none;
 
 }
+
+
+
 
 img {
   
