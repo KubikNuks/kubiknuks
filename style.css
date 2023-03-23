@@ -133,5 +133,20 @@ animation-timing-function: ease-in;
 }
   
 img:hover {
-  transform: scale(1.1);
+  animation-name: spin-reverse;
+}
+
+@keyframes spin-reverse {
+  10% {
+    transform: rotateY(-50deg);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: rotateY(-180deg);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: rotateY(-360deg);
+    animation-timing-function: ease-in;
+  }
 }
