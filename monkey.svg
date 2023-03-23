@@ -5944,5 +5944,21 @@ QmCC
        height="763.86438"
        x="547.77118"
        y="-67.843216" />
+    <rect
+       style="fill:#51386b;fill-opacity:1;stroke-width:3.02362;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.1"
+       id="rect3610"
+       width="140.71187"
+       height="763.86438"
+       x="585.46191"
+       y="-95.483055"
+       transform="matrix(0,1,1,0,0,0)" />
+    <rect
+       style="fill:#51386b;fill-opacity:1;stroke-width:3.02362;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.1"
+       id="rect3612"
+       width="140.71187"
+       height="763.86438"
+       x="-125.63557"
+       y="-87.944916"
+       transform="matrix(0,1,1,0,0,0)" />
   </g>
 </svg>
