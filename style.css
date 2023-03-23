@@ -27,6 +27,7 @@ background: linear-gradient(to left, #532a66, #c0a0cf);
 color: #fff;
 text-decoration: none;
 border-radius: 5px;
+
 }
 
 div {
@@ -74,25 +75,9 @@ background-color: #c4a4e6;
 
 
 
-.square {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  border-radius: 5px;
-  pointer-events: none; /* Prevent the square from blocking the click event */
-}
 
-.projectile {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: yellow;
-  border-radius: 50%;
-  display: none;
-}
 
-a {
+a{
 display: block;
 margin-top: 20px;
 text-align: center;
@@ -100,14 +85,8 @@ text-decoration: none;
 
 }
 
-.grow-on-hover {
-  border-radius: 10px;
-  animation: spin 7s linear infinite;
-  transition: transform 0.2s ease-in-out;
-}
-.grow-on-hover.grow {
-  transform: scale(1.1);
-}
+
+
 
 
 img {
@@ -132,21 +111,3 @@ animation-timing-function: ease-in;
 }
 }
   
-img:hover {
-  animation-name: spin-reverse;
-}
-
-@keyframes spin-reverse {
-  10% {
-    transform: rotateY(-50deg);
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: rotateY(-180deg);
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: rotateY(-360deg);
-    animation-timing-function: ease-in;
-  }
-}
