@@ -6,6 +6,9 @@ justify-content: center;
 align-items: center;
 height: 100vh; /* sets the height of the page to be the viewport height */
 }
+.container {
+
+}
 form {
 display: flex;
 flex-direction: column;
@@ -26,7 +29,10 @@ text-decoration: none;
 border-radius: 5px;
 }
 
-
+div {
+  display: block;
+  text-align: center;
+}
 
 .button-hover {
   text-align: center;
@@ -64,6 +70,28 @@ background-color: #c4a4e6;
 }
 
 /* Center the link */
+
+
+
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 5px;
+  pointer-events: none; /* Prevent the square from blocking the click event */
+}
+
+.projectile {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: none;
+}
+
 a {
 display: block;
 margin-top: 20px;
@@ -72,13 +100,21 @@ text-decoration: none;
 
 }
 
-
+.grow-on-hover {
+  border-radius: 10px;
+  animation: spin 7s linear infinite;
+  transition: transform 0.2s ease-in-out;
+}
+.grow-on-hover.grow {
+  transform: scale(1.1);
+}
 
 
 img {
   
   border-radius:10px;
 animation: spin 7s linear infinite;
+transition: transform 0.2s ease-in-out;
 }
 
 @keyframes spin {
@@ -96,3 +132,6 @@ animation-timing-function: ease-in;
 }
 }
   
+img:hover {
+  transform: scale(1.1);
+}
