@@ -157,7 +157,7 @@ img {
   
 
   max-width: min-content;
-  height: auto;
+height: auto;
 animation: spin 7s linear infinite;
 transition: transform 0.2s ease-in-out;
 }

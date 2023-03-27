@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selection Example</title>
+	<style>
+		.selected {
+			border: 3px solid green;
+		}
+		.square {
+			width: 50px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="square" class="square"></div>
+	<button onclick="incrementCounter()">Increment Counter</button>
+	<script>
+		var square = document.getElementById("square");
+		var counter = 0;
+
+		function selectSquare() {
+			square.classList.add("selected");
+		}
+
+		function deselectSquare(event) {
+			square.classList.remove("selected");
+			var x = event.clientX;
+			var y = event.clientY;
+			square.style.left = x + "px";
+			square.style.top = y + "px";
+		}
+
+		function incrementCounter() {
+			counter++;
+			updateCounter();
+		}
+
+		function updateCounter() {
+			document.getElementById("counter").innerHTML = counter;
+		}
+
+		document.addEventListener("click", function(event) {
+			if (square.classList.contains("selected")) {
+				var x = event.clientX;
+				var y = event.clientY;
+				square.style.left = x + "px";
+				square.style.top = y + "px";
+			}
+		});
+
+		square.addEventListener("click", selectSquare);
+		document.addEventListener("click", deselectSquare);
+		updateCounter();
+	</script>
+	<div id="counter"></div>
+</body>
+</html>
+-------------------------------------------------------------------------------------------------------
+Prawie dzialajacy kod na rtsa 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selection Example</title>
+	<style>
+		.selected {
+			border: 3px solid green;
+		}
+		.square {
+			width: 50px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="square" class="square"></div>
+	<button onclick="incrementCounter()">Increment Counter</button>
+	<script>
+		var square = document.getElementById("square");
+		var counter = 0;
+		var intervalId;
+
+		function selectSquare() {
+			square.classList.add("selected");
+			document.removeEventListener("click", deselectSquare);
+		}
+
+		function deselectSquare(event) {
+			square.classList.remove("selected");
+			var x = event.clientX;
+			var y = event.clientY;
+			square.style.left = x + "px";
+			square.style.top = y + "px";
+		}
+
+		function incrementCounter() {
+			counter++;
+			updateCounter();
+		}
+
+		function updateCounter() {
+			document.getElementById("counter").innerHTML = counter;
+		}
+
+		document.addEventListener("click", function(event) {
+			if (square.classList.contains("selected")) {
+				var startX = parseInt(square.style.left) || 0;
+				var startY = parseInt(square.style.top) || 0;
+				var endX = event.clientX;
+				var endY = event.clientY;
+				var distance = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+				var duration = 1000 * distance / 200; // Move at a speed of 200 pixels per second
+				var startTime = new Date().getTime();
+
+				clearInterval(intervalId);
+				intervalId = setInterval(function() {
+					var currentTime = new Date().getTime();
+					var elapsed = currentTime - startTime;
+					var fraction = elapsed / duration;
+
+					if (fraction >= 1) {
+						square.style.left = endX + "px";
+						square.style.top = endY + "px";
+						clearInterval(intervalId);
+					} else {
+						var x = startX + (endX - startX) * fraction;
+						var y = startY + (endY - startY) * fraction;
+						square.style.left = x + "px";
+						square.style.top = y + "px";
+					}
+				}, 10);
+			}
+		});
+
+		square.addEventListener("click", selectSquare);
+		updateCounter();
+	</script>
+	<div id="counter"></div>
+</body>
+</html>
